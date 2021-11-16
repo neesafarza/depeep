@@ -40,11 +40,11 @@ export const ItemList = () => {
         setHideSoldItems={setHideSoldItems}
       />
       {error ? (
-        <div className="error-container">
+        <div className="error-container" data-testid="get-items-error">
           An error has occured getting the latest items. Please try again later.
         </div>
       ) : (
-        <div className="items-list">
+        <div className="items-list" data-testid="item-list">
           {items ? displayProduct() : <div>Loading....</div>}
         </div>
       )}
